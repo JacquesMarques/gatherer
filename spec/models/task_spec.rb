@@ -1,17 +1,14 @@
-require 'rspec'
+require 'rails_helper'
 
-describe 'Task' do
-  before do
-    # Do nothing
+describe Task do
+  let(:task) { Task.new }
+
+  it 'does not have a new task as complete' do
+    expect(task).not_to be_complete
   end
 
-  after do
-    # Do nothing
-  end
-
-  context 'when condition' do
-    it 'succeeds' do
-      pending 'Not implemented'
-    end
+  it 'allows us to complete a task' do
+    task.mark_completed
+    expect(task).to be_complete
   end
 end
