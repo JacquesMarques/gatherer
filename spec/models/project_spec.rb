@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Project do
+RSpec.describe Project do
   let(:project) { Project.new }
   let(:task) { Task.new }
 
